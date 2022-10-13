@@ -1,4 +1,4 @@
-package com.complete.newsreporter.ui
+package com.complete.newsreporter.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.complete.newsreporter.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ResultFragment : Fragment() {
 
     override fun onCreateView(

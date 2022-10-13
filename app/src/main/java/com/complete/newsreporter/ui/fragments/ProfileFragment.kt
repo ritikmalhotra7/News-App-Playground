@@ -1,4 +1,4 @@
-package com.complete.newsreporter.ui
+package com.complete.newsreporter.ui.fragments
 
 import android.app.Activity
 import android.content.Intent
@@ -17,10 +17,11 @@ import com.complete.newsreporter.utils.Constants.storageReference
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_profile.*
 import java.io.File
 
-
+@AndroidEntryPoint
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
 

@@ -1,4 +1,4 @@
-package com.complete.newsreporter.ui
+package com.complete.newsreporter.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,11 +9,13 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.complete.newsreporter.R
 import com.complete.newsreporter.model.User
+import com.complete.newsreporter.ui.activities.LoginActivity
 import com.complete.newsreporter.utils.Constants.dbReferenceUsers
 import com.complete.newsreporter.utils.Constants.firebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_signup.*
-
+@AndroidEntryPoint
 class SignUpFragment : Fragment(R.layout.fragment_signup) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

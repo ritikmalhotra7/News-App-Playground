@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/breakingNewsFragment"
-        android:name="com.complete.newsreporter.ui.BreakingNewsFragment"
+        android:name="com.complete.newsreporter.ui.fragments.BreakingNewsFragment"
         android:label="BreakingNewsFragment" >
         <action
             android:id="@+id/action_breakingNewsFragment_to_articleFragment"
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/articleFragment"
-        android:name="com.complete.newsreporter.ui.ArticleFragment"
+        android:name="com.complete.newsreporter.ui.fragments.ArticleFragment"
         android:label="ArticleFragment" >
         <argument
             android:name="article"
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/savedNewsFragment"
-        android:name="com.complete.newsreporter.ui.SavedNewsFragment"
+        android:name="com.complete.newsreporter.ui.fragments.SavedNewsFragment"
         android:label="SavedNewsFragment" >
         <action
             android:id="@+id/action_savedNewsFragment_to_articleFragment"
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/sosFragment"
-        android:name="com.complete.newsreporter.ui.SosFragment"
+        android:name="com.complete.newsreporter.ui.fragments.SosFragment"
         android:label="fragment_sos"
         tools:layout="@layout/fragment_sos" >
         <action
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/tvFragment"
-        android:name="com.complete.newsreporter.ui.TvFragment"
+        android:name="com.complete.newsreporter.ui.fragments.TvFragment"
         android:label="fragment_tv"
         tools:layout="@layout/fragment_tv" >
         <action
@@ -65,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchNewsFragment"
-        android:name="com.complete.newsreporter.ui.SearchNewsFragment"
+        android:name="com.complete.newsreporter.ui.fragments.SearchNewsFragment"
         android:label="SearchNewsFragment" >
         <action
             android:id="@+id/action_searchNewsFragment_to_articleFragment"
@@ -73,7 +73,7 @@
     </fragment>
     <fragment
         android:id="@+id/watchTvFragment"
-        android:name="com.complete.newsreporter.ui.WatchTvFragment"
+        android:name="com.complete.newsreporter.ui.fragments.WatchTvFragment"
         android:label="fragment_tv"
         tools:layout="@layout/fragment_tv" >
         <argument
@@ -83,7 +83,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
-        android:name="com.complete.newsreporter.ui.SettingFragment"
+        android:name="com.complete.newsreporter.ui.fragments.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" >
         <action
@@ -119,16 +119,16 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.complete.newsreporter.ui.ProfileFragment"
+        android:name="com.complete.newsreporter.ui.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <activity
         android:id="@+id/loginActivity"
-        android:name="com.complete.newsreporter.ui.LoginActivity"
+        android:name="com.complete.newsreporter.ui.activities.LoginActivity"
         android:label="LoginActivity" />
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.complete.newsreporter.situations_fragments.ResultFragment"
+        android:name="com.complete.newsreporter.ui.fragments.ResultFragment"
         android:label="ResultFragment" >
         <argument
             android:name="situation"

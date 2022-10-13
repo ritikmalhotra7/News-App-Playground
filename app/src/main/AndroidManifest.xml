@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppReporter">
         <activity
-            android:name=".ui.LoginActivity"
+            android:name=".ui.activities.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.AppReporter.NoActionBar">
             <intent-filter>
@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.NewsActivity"
+            android:name=".ui.activities.NewsActivity"
             android:exported="true"
             android:theme="@style/Theme.AppReporter.NoActionBar"></activity>
     </application>

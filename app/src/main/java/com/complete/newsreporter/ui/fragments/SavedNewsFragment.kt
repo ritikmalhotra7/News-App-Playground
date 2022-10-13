@@ -1,4 +1,4 @@
-package com.complete.newsreporter.ui
+package com.complete.newsreporter.ui.fragments
 
 import android.os.Bundle
 import android.view.View
@@ -9,15 +9,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.complete.newsreporter.ui.NewsActivity
+import com.complete.newsreporter.ui.activities.NewsActivity
 import com.complete.newsreporter.R
 import com.complete.newsreporter.adapter.NewsAdapter
-import com.complete.newsreporter.model.Article
-import com.complete.newsreporter.ui.NewsViewModel
+import com.complete.newsreporter.ui.viewmodels.NewsViewModel
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.fragment_breaking_news.*
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_saved_news.*
-
+@AndroidEntryPoint
 class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {
     private lateinit var viewModel: NewsViewModel
     private lateinit var newsAdapter:NewsAdapter

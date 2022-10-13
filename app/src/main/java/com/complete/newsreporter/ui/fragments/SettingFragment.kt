@@ -1,9 +1,8 @@
-package com.complete.newsreporter.ui
+package com.complete.newsreporter.ui.fragments
 
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,22 +10,19 @@ import android.widget.AdapterView
 import android.widget.CompoundButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.MutableLiveData
 import androidx.navigation.Navigation
 import com.complete.newsreporter.R
 import com.complete.newsreporter.databinding.FragmentSettingBinding
-import com.complete.newsreporter.model.NewsResponse
-import com.complete.newsreporter.utils.Constants
-import com.complete.newsreporter.utils.Constants.REGION
+import com.complete.newsreporter.ui.activities.LoginActivity
+import com.complete.newsreporter.ui.activities.NewsActivity
+import com.complete.newsreporter.ui.viewmodels.NewsViewModel
 import com.complete.newsreporter.utils.Constants.firebaseAuth
-import com.complete.newsreporter.utils.Constants.pos
 import com.complete.newsreporter.utils.Constants.setRegion
-import com.complete.newsreporter.utils.Resources
 import com.complete.newsreporter.utils.readPos
 import com.royrodriguez.transitionbutton.TransitionButton
-import kotlinx.android.synthetic.main.fragment_login.*
-import kotlinx.android.synthetic.main.fragment_setting.*
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SettingFragment : Fragment(R.layout.fragment_setting) {
 
     private lateinit var viewModel: NewsViewModel

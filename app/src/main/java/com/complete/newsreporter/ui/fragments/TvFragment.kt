@@ -1,4 +1,4 @@
-package com.complete.newsreporter.ui
+package com.complete.newsreporter.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,9 +15,9 @@ import com.complete.newsreporter.utils.Constants.CNN
 import com.complete.newsreporter.utils.Constants.GNT_NEWS
 import com.complete.newsreporter.utils.Constants.INDIA_TODAY_NEWS
 import com.complete.newsreporter.utils.Constants.NDTV_NEWS
+import dagger.hilt.android.AndroidEntryPoint
 
-import kotlinx.android.synthetic.main.fragment_tv.*
-
+@AndroidEntryPoint
 class TvFragment : Fragment(R.layout.fragment_tv) {
 
     override fun onCreateView(

@@ -1,41 +1,32 @@
-package com.complete.newsreporter.ui
+package com.complete.newsreporter.ui.activities
 
-import android.app.PendingIntent.getActivity
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.*
 import com.complete.newsreporter.R
-import com.complete.newsreporter.database.ArticleDatabase
-import com.complete.newsreporter.database.NewsRepository
 import com.complete.newsreporter.databinding.ActivityNewsBinding
+import com.complete.newsreporter.ui.viewmodels.NewsViewModel
 import com.complete.newsreporter.utils.Constants
-import com.complete.newsreporter.utils.read
 import com.complete.newsreporter.utils.readPos
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_news.*
-import kotlinx.android.synthetic.main.activity_news.view.*
-import kotlinx.android.synthetic.main.fragment_profile.*
 
-
+@AndroidEntryPoint
 class NewsActivity : AppCompatActivity() {
     private var _binding:ActivityNewsBinding? = null
-    val binding : ActivityNewsBinding get() = _binding!!
+    private val binding : ActivityNewsBinding get() = _binding!!
 
-    lateinit var newsViewModel: NewsViewModel
+    val newsViewModel : NewsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val repository :NewsRepository = NewsRepository(ArticleDatabase(this))
-        val viewModelFactory = NewsViewModelProviderFactory(application,repository)
-        newsViewModel = ViewModelProvider(this,viewModelFactory).get(NewsViewModel::class.java)
         bottomNavigationView.background = null
         bottomNavigationView.menu.get(2).isEnabled = false
         bottomNavigationView.setupWithNavController(newsNavHostFragment.findNavController())

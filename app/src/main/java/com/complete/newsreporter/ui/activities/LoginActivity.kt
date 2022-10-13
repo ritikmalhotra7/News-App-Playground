@@ -1,13 +1,14 @@
-package com.complete.newsreporter.ui
+package com.complete.newsreporter.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.complete.newsreporter.R
-import com.complete.newsreporter.databinding.ActivityLoginBinding
 import com.complete.newsreporter.utils.Constants
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

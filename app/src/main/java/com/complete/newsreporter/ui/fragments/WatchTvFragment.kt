@@ -1,4 +1,4 @@
-package com.complete.newsreporter.ui
+package com.complete.newsreporter.ui.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -11,9 +11,9 @@ import android.webkit.WebViewClient
 import androidx.navigation.fragment.navArgs
 import com.complete.newsreporter.R
 import com.complete.newsreporter.databinding.FragmentWatchTvBinding
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.fragment_article.*
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class WatchTvFragment : Fragment(R.layout.fragment_watch_tv) {
     val args : WatchTvFragmentArgs by navArgs()
 

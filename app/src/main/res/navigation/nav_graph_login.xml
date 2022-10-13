@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.complete.newsreporter.ui.LoginFragment"
+        android:name="com.complete.newsreporter.ui.fragments.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.complete.newsreporter.ui.SignUpFragment"
+        android:name="com.complete.newsreporter.ui.fragments.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_signup" >
         <action
@@ -27,6 +27,6 @@
     </fragment>
     <fragment
         android:id="@+id/loginViaPhoneFragment"
-        android:name="com.complete.newsreporter.ui.LoginViaPhoneFragment"
+        android:name="com.complete.newsreporter.ui.fragments.LoginViaPhoneFragment"
         android:label="LoginViaPhoneFragment" />
 </navigation>

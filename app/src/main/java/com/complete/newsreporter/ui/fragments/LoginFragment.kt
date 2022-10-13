@@ -1,4 +1,4 @@
-package com.complete.newsreporter.ui
+package com.complete.newsreporter.ui.fragments
 
 
 import android.content.Intent
@@ -10,12 +10,13 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.complete.newsreporter.R
-import com.complete.newsreporter.ui.NewsActivity
+import com.complete.newsreporter.ui.activities.NewsActivity
 import com.complete.newsreporter.utils.Constants.firebaseAuth
 import com.google.firebase.auth.FirebaseAuth
 import com.royrodriguez.transitionbutton.TransitionButton
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_login.*
-
+@AndroidEntryPoint
 class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private lateinit var mAuth:FirebaseAuth

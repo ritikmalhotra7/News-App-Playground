@@ -1,4 +1,4 @@
-package com.complete.newsreporter.ui
+package com.complete.newsreporter.ui.fragments
 
 import android.app.Dialog
 import android.content.Intent
@@ -12,15 +12,17 @@ import com.complete.newsreporter.R
 import com.complete.newsreporter.databinding.DialogViewBinding
 import com.complete.newsreporter.databinding.FragmentLoginViaPhoneBinding
 import com.complete.newsreporter.model.User
+import com.complete.newsreporter.ui.activities.NewsActivity
 import com.complete.newsreporter.utils.Constants.dbReferenceUsers
 import com.complete.newsreporter.utils.Constants.firebaseAuth
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_login_via_phone.*
 import java.util.concurrent.TimeUnit
-
+@AndroidEntryPoint
 class LoginViaPhoneFragment : Fragment(R.layout.fragment_login_via_phone) {
     private var _binding: FragmentLoginViaPhoneBinding? = null
 

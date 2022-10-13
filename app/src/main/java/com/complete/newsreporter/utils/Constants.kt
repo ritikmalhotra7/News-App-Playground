@@ -1,12 +1,7 @@
 package com.complete.newsreporter.utils
 
 import android.app.Activity
-import android.app.Application
-import android.content.Context
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.complete.newsreporter.model.Situations
-import com.complete.newsreporter.ui.NewsActivity
-import com.complete.newsreporter.ui.SettingFragmentDirections
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
