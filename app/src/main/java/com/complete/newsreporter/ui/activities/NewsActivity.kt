@@ -1,5 +1,8 @@
 package com.complete.newsreporter.ui.activities
 
+import android.content.BroadcastReceiver
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
@@ -11,6 +14,7 @@ import androidx.navigation.ui.*
 import com.complete.newsreporter.R
 import com.complete.newsreporter.databinding.ActivityNewsBinding
 import com.complete.newsreporter.ui.viewmodels.NewsViewModel
+import com.complete.newsreporter.utils.AirPlaneModeReceiver
 import com.complete.newsreporter.utils.Constants
 import com.complete.newsreporter.utils.readPos
 import dagger.hilt.android.AndroidEntryPoint
@@ -18,6 +22,7 @@ import kotlinx.android.synthetic.main.activity_news.*
 
 @AndroidEntryPoint
 class NewsActivity : AppCompatActivity() {
+    private lateinit var receiver: BroadcastReceiver
     private var _binding:ActivityNewsBinding? = null
     private val binding : ActivityNewsBinding get() = _binding!!
 
@@ -27,6 +32,12 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        receiver = AirPlaneModeReceiver()
+        IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED).also {
+            registerReceiver(receiver,it)
+        }
+
         bottomNavigationView.background = null
         bottomNavigationView.menu.get(2).isEnabled = false
         bottomNavigationView.setupWithNavController(newsNavHostFragment.findNavController())
@@ -74,5 +85,10 @@ class NewsActivity : AppCompatActivity() {
         }
         Log.d("taget","hogya change")
         return true
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        unregisterReceiver(receiver)
     }
 }

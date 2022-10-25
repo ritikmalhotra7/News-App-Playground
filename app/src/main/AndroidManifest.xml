@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:name=".NewsApplication"
@@ -29,6 +30,13 @@
             android:name=".ui.activities.NewsActivity"
             android:exported="true"
             android:theme="@style/Theme.AppReporter.NoActionBar"></activity>
+        <receiver android:name=".utils.AirPlaneModeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+            </intent-filter>
+        </receiver>
     </application>
+
 
 </manifest>

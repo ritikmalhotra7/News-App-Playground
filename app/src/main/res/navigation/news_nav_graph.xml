@@ -17,6 +17,11 @@
             app:exitAnim="@anim/slide_out_left"
             app:popExitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_breakingNewsFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/articleFragment"
@@ -133,5 +138,16 @@
         <argument
             android:name="situation"
             app:argType="com.complete.newsreporter.model.Situations" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.complete.newsreporter.ui.fragments.ScannerFragment"
+        android:label="fragment_scanner"
+        tools:layout="@layout/fragment_scanner" >
+        <action
+            android:id="@+id/action_scannerFragment_to_searchNewsFragment"
+            app:destination="@id/searchNewsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
     </fragment>
 </navigation>
