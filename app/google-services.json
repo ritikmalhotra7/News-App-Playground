@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "224264810134",
+    "firebase_url": "https://pocket-news-298cf-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "pocket-news-298cf",
     "storage_bucket": "pocket-news-298cf.appspot.com"
   },
@@ -14,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "224264810134-bha8m54ivvv9nqa7tqnfbs29s8fs29j1.apps.googleusercontent.com",
+          "client_id": "224264810134-5359j22g3l9fh3618n6om53ck46hsc9i.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.complete.newsreporter",
-            "certificate_hash": "7e47cff6ee6da58afba71a806ba02f5e30191944"
+            "certificate_hash": "0d2a71f87f528b35b27dd9b1b4bcc3d392f8ecbb"
           }
         },
         {
